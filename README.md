@@ -3,7 +3,7 @@ Useful functions for analyzing and plotting experimental results
 
 ## Setup
 ```
-from disney_util.disney_experiments import disney_experiments as dexp
+from disney_util.disney_experiments import disney_experiments as expplot
 ```
 
 ## Plotting Experiment Confidence Intervals
@@ -13,7 +13,7 @@ See the tutorial notebook in tutorial/disney_viz_example.ipynb.
 
 
 ```
-dexp.plot_lift(
+expplot.plot_lift(
     df,
     title=None, 
     combine_axes=False,
@@ -63,12 +63,12 @@ Produces experiment results confidence intervals images.
 
 Dataframe should be in the following format:
 
-![dexp_example_dataframe](images/dexp_example_dataframe.png)
+![expplot_example_dataframe](images/expplot_example_dataframe.png)
 
 Note: columns "alpha" and "success_side" are optional.  If not provided the default will be alpha=0.05, and success_side='positive'.
 
 ```
-fig, ax = dexp.plot_lift(
+fig, ax = expplot.plot_lift(
     df, 
     title='EMEA Recommended For You experiment',
     combine_axes=False,
@@ -76,13 +76,13 @@ fig, ax = dexp.plot_lift(
     as_percent=True)
 ```
 
-![dexp_example_plot](images/dexp_example_plot.png)
+![expplot_example_plot](images/expplot_example_plot.png)
 
 ## Getting experiment lift raw values
 ```
-df_lift = dexp.calculate_lift(
+df_lift = expplot.calculate_lift(
     df, 
     lift_type='relative')
 ```
 
-![dexp_example_lift_dataframe](images/dexp_example_lift_dataframe.png)
+![expplot_example_lift_dataframe](images/expplot_example_lift_dataframe.png)
