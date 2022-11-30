@@ -1,15 +1,20 @@
-# Disney Experiments
+# Experiment Plots
 Useful functions for analyzing and plotting experimental results
+
+## Installation
+```
+!pip3 install git+https://github.com/eddykimdata/expplot
+```
 
 ## Setup
 ```
-from disney_util.disney_experiments import disney_experiments as expplot
+from expplot import expplot
 ```
 
 ## Plotting Experiment Confidence Intervals
 Adapted from https://geoffruddock.com/matplotlib-experiment-visualizations/
 
-See the tutorial notebook in tutorial/disney_viz_example.ipynb.
+See the tutorial notebook in tutorial.ipynb.
 
 
 ```
